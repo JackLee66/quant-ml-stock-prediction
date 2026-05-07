@@ -51,3 +51,4 @@ The project uses:
 
 ```python
 RandomForestClassifier
+![Backtest](images/backtest.png)
