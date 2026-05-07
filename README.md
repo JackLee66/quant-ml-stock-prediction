@@ -47,8 +47,38 @@ The following quantitative factors are constructed:
 
 ## Model
 
-The project uses:
+The project uses RandomForestClassifier to predict whether the stock price will rise or fall on the next trading day.
 
-```python
-RandomForestClassifier
-![Backtest](images/backtest.png)
+---
+
+## Backtesting Strategy
+
+Trading logic:
+
+- Predict Up → Buy
+- Predict Down → Hold Cash
+
+The project compares:
+
+- Market cumulative return
+- Strategy cumulative return
+
+to evaluate strategy performance.
+
+---
+
+## Project Structure
+
+```text
+quant-ml-stock-prediction/
+│
+├── data/
+│   └── maotai.csv
+│
+├── images/
+│   └── backtest.png
+│
+├── main.py
+├── requirements.txt
+├── README.md
+└── .gitignore
