@@ -1,23 +1,53 @@
-# Stock Price Prediction (Machine Learning)
+# Quantitative Stock Prediction Based on Machine Learning
 
-## Overview
-This project uses machine learning to predict stock price movements based on historical data.
+## Project Overview
+
+This project builds a quantitative trading strategy based on machine learning using A-share historical stock data.
+
+The project constructs technical indicators and quantitative factors, applies a Random Forest model to predict short-term stock price movements, and performs strategy backtesting to evaluate the effectiveness of the trading strategy.
+
+---
 
 ## Tech Stack
+
 - Python
-- pandas, numpy
+- pandas
+- numpy
 - scikit-learn
+- matplotlib
 - akshare
 
-## Features
-- Data acquisition using akshare
-- Feature engineering (returns, moving averages)
-- Logistic regression model
-- Time-series train-test split
+---
 
-## Result
-The model achieves stable prediction performance on test data.
+## Workflow
 
-## Run
-pip install -r requirements.txt  
-python main.py
+1. Collect A-share historical stock data
+2. Perform data preprocessing
+3. Construct quantitative factors
+4. Train machine learning model
+5. Predict stock movement direction
+6. Backtest trading strategy
+7. Visualize cumulative returns
+
+---
+
+## Feature Engineering
+
+The following quantitative factors are constructed:
+
+- Daily Return
+- MA5 (5-day Moving Average)
+- MA10 (10-day Moving Average)
+- Volatility
+- Momentum Factor
+- Moving Average Difference
+- Volume Change Rate
+
+---
+
+## Model
+
+The project uses:
+
+```python
+RandomForestClassifier
